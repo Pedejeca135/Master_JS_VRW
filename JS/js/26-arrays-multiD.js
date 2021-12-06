@@ -41,3 +41,9 @@ console.log(pelisJoin);
 var cadena = "texto1 , texto2 , texto3";
 
 var cadenaArray = cadena.split(",");
+
+peliculas.sort();
+console.log(peliculas);
+
+peliculas.reverse();
+console.log(peliculas);

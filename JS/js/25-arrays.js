@@ -40,8 +40,38 @@ document.write("<ul>");
 // {
 //     document.write("<li>"+lenguajes[i]+"</li>")
 // }
+
 lenguajes.forEach((elemento)=>{
     document.write("<li>"+elemento +"</li>");
 });
 
 document.write("</ul>");
+
+
+for(let lenguaje in lenguajes){
+    document.write("<li>" + lenguajes[lenguaje] + "</li>");
+}
+
+//Busquedas
+var busq = lenguajes.find(
+    function(lenguaje){
+
+    return lenguaje == "PHP";
+});
+console.log(busq);
+
+var busq = lenguajes.find(
+    lenguaje => 
+    lenguaje == "PHP");
+console.log(busq);
+
+var busq = lenguajes.findIndex(
+    lenguaje => 
+    lenguaje == "PHP");
+console.log(busq);
+
+var precios = [10,20,30,40,50,12];
+var busq = precios.some(
+    precio => 
+    precio >= 20);
+console.log(busq);
