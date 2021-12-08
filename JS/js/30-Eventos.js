@@ -1,6 +1,7 @@
 'use strict'
 
-//Eventos del raton
+window.addEventListener('load',()=>{
+    //Eventos del raton
 
 var boton = document.querySelector("#boton");
 
@@ -48,15 +49,18 @@ input.addEventListener('blur',function(){
 //keydown
 input.addEventListener('keydown',function(e){
     console.log("Pulsando esta tecla", String.fromCharCode(e.keyCode), "pura vida carnal");
-})
+});
 
 //keypress
 input.addEventListener('keypress',function(e){
     console.log("PPP", String.fromCharCode(e.keyCode), "pura vida carnal");
-})
+});
 
 
 //keyup
 input.addEventListener('keyup',function(e){
     console.log("@@@@@@@@@@@@@@@@@@@@@@", String.fromCharCode(e.keyCode), "pura vida carnal");
-})
+});
+
+});//end load
+
