@@ -5,8 +5,6 @@ window.addEventListener('load',()=>{
 
 var boton = document.querySelector("#boton");
 
-
-
 function cambiarColor(){
     var bg = boton.style.backgroundColor;
     if(bg == "green"){
