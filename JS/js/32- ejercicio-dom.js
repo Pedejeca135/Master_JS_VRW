@@ -18,17 +18,28 @@ window.addEventListener('load', function(){
         if(nombre.trim() == "null" || nombre.trim().length == 0)
         {
             alert("El nombre no es valido");
+            document.querySelector("#error_nombre").innerHTML="El nombre no es valido";
             return false;
+        }
+        else{
+            document.querySelector("#error_nombre").style.display="none";
         }
         if(apellido.trim() == "null" || apellido.trim().length == 0)
         {
             alert("El apellido no es valido");
+            document.querySelector("#error_apellido").innerHTML="El apellido no es valido";
             return false;
+        }
+        else{
+            document.querySelector("#error_apellido").style.display="none";
         }
         if(edad == "null" || edad<= 0 || isNaN(edad))
         {
             alert("La edad no es valida");
+            document.querySelector("#error_edad").innerHTML="La edad no es valida";
             return false;
+        } else{
+            document.querySelector("#error_edad").style.display="none";
         }
 
         console.log("nombre: " + nombre, "apellidos: " + apellido, "edad: "+ edad);
