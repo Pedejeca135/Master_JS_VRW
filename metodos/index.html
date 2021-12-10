@@ -20,12 +20,16 @@
 </head>
 <body>
     
-    <h1>Holla</h1>
+    
+    
+    <div class="" id="pokemon">
+        <h1>Pokemon</h1>
+    </div>
 
     <script>
-        const $pokemon = document.querySelector("#pokemon");
+        const pokemon = document.querySelector("#pokemon");
         function renderPokemon(image){
-            $pokemon.setAttribute("src", image);
+            pokemon.setAttribute("src", image);
         }
 
         fetch('pokemon.json',{
@@ -47,8 +51,13 @@
                 renderPokemon(data.image);
             })
 
+            fetch('pikachu.png')
+            .then(response =>response.blob())
+            .then(data => {
+                renderPokemon(data.image)
+            })
+
     </script>
-    <div class="" id="pokemon"></div>
 
 
 </body>
