@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            margin:0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f6bd20;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <h1>Holla</h1>
+
+    <script>
+        const $pokemon = document.querySelector("#pokemon");
+        function renderPokemon(image){
+            $pokemon.setAttribute("src", image);
+        }
+
+        fetch('pokemon.json',{
+            
+        //'pokemon.json', {
+            // method:'GET',
+            // headers:{
+            //     'Content-Type': 'application/json',
+            //     'szszszdfa' : 'asdfsdfadfs',
+            // },
+            // method:'POST',
+            // body: JSON.stringify({
+            //     mame: 'leonidas',
+            //     age:28,
+            })
+            .then((response)=> response.json())
+            .then(data=>{
+                
+                renderPokemon(data.image);
+            })
+
+    </script>
+    <div class="" id="pokemon"></div>
+
+
+</body>
+</html>
