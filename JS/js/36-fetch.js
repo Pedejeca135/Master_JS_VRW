@@ -29,30 +29,23 @@ getUsuarios()
 .then(data => data.json())
 .then(user => {
     mostrarJanet(user.data);
+})
+.catch(error => {
+    alert("eeror");
 });
-
-function getInfo(){
-    var ptofesor ={
-        nombre : "vick",
-        apellidos : "roberto",
-        url: "yonocompitoaninguno"
-    };
 
     return new Promise((resolve, reject) => {
         var profesor_string="";
+
         setTimeout(function(){
             profesor_string = JSON.stringify(profesor);
 
-            if(typeof profesor_string != 'string' || profesor_string == '') return reject('error1');
-
-            return resolve(profesor_string);
+            if(typeof profesor_string != 'string' || profesor_string == '') 
+                return reject('error1')
+            else
+                return resolve(profesor_string);
         }, 3000);
-
-       
     });
-}
-
-
 
     function getUsuarios(){
         return fetch('https://reqres.in/api/users');
@@ -60,6 +53,14 @@ function getInfo(){
 
     function getUser(){
         return fetch("https://reqres.in/api/users/2")
+    }
+
+    function getInfo(){
+        var ptofesor ={
+            nombre : "vick",
+            apellidos : "roberto",
+            url: "yonocompitoaninguno"
+        };
     }
 
     function listadoUsuarios(usuarios)
@@ -76,7 +77,7 @@ function getInfo(){
         });
     }   
 
-    function mostrarJanet(user){
+    function mostrarJanet(user,i){
         let nombre = document.createElement("h4");
         nombre.innerHTML = i + '. '+ user.first_name + " " + user.last_name
         div_janet.appendChild(nombre);
