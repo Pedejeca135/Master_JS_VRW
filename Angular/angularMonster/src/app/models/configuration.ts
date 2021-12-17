@@ -1,5 +1,5 @@
 export var configuracion = {
-    color: "red",
+    color: "tomato",
     fondo: "blue",
     titulo: "Master en Java Script y Angular",
     descripcion: "aprendiendo angular con victor robles"
