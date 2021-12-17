@@ -9,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angularMonster The one and only';
+  public mostrar_videojuegos:boolean = true;
+
+  ocultarVideoJuegos(value:boolean=true){
+    this.mostrar_videojuegos = value;
+  }
 }
